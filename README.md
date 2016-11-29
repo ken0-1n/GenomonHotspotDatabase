@@ -17,7 +17,7 @@ database
 * [CosmicMutantExport.tsv from the COSMIC FTP site](http://cancer.sanger.ac.uk/cosmic/download)
 * GRCh37-lite.fa
   ftp://ftp.ncbi.nih.gov/genomes/archive/old_genbank/Eukaryotes/vertebrates_mammals/Homo_sapiens/GRCh37/special_requests/
-* The database/statistically_significant_hotspot.txt was created from the following table:
+* The database/statistically_significant_hotspot.txt was created from the following table:    
   [Identifying recurrent mutations in cancer reveals widespread lineage diversity and mutational specificity](http://www.nature.com/nbt/journal/v34/n2/full/nbt.3391.html) Chang, M.T. et al, Nature Biotechnology, 2016.
   Supplementary Table 2: Summary of statistically significant hotspot mutations
 
