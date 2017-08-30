@@ -54,14 +54,18 @@ $ ./annotate_variation.pl -buildver hg19 -downdb -webfrom annovar ensGene humand
 $ ./annotate_variation.pl -buildver hg19 -downdb -webfrom annovar knownGene humandb/  
 ```
 
-4. Open scripts/make_hotspot_info.sh and set each entry.  
-    REF_GENE_BED="The path to to the refGene.coding.exon.151207.bed"  
-    BEDTOOLS="The path to the bedtools-2.24.0/bin/bedtools"  
-    GRCH37="The path to the GRCh37.fa"  
-    ANNOVAR_DIR="The path to the annovar"  
-    ENSEMBLE_GENE="The path to the ensemblToGeneName.txt"  
-    COSMIC_MUTATNT="The path to the CosmicMutantExport.tsv"  
-    HOTSPOT_LIST="the path to the statistically_significant_hotspot.txt"  
+4. Open make_hotspot_info.sh and set each entry.  
+```
+ $ vi GenomonHotspotDatabase/scripts/make_hotspot_info.sh
+ 
+ 10 REF_GENE_BED="The path to to the refGene.coding.exon.151207.bed"  
+ 11 BEDTOOLS="The path to the bedtools-2.24.0/bin/bedtools"  
+ 12 GRCH37="The path to the GRCh37.fa"  
+ 13 ANNOVAR_DIR="The path to the annovar"  
+ 14 ENSEMBLE_GENE="The path to the ensemblToGeneName.txt"  
+ 15 COSMIC_MUTATNT="The path to the CosmicMutantExport.tsv"  
+ 16 HOTSPOT_LIST="the path to the statistically_significant_hotspot.txt"  
+```
 
 Run
 ---
