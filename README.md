@@ -29,23 +29,27 @@ SetUp
     $ git clone https://github.com/ken0-1n/GenomonHotspotDatabase.git
     
 2. Download database
-    $ cd GenomonHotspotDatabase/database
-    # Download refGene.txt
-    $ wget http://hgdownload.cse.ucsc.edu/goldenpath/hg19/database/refGene.txt.gz 
-    $ gunzip refGene.txt.gz
-    # Download ensemblToGeneName.txt
-    $ wget http://hgdownload.cse.ucsc.edu/goldenpath/hg19/database/ensemblToGeneName.txt.gz
-    $ gunzip ensemblToGeneName.txt.gz
-    # Download CosmicMutantExport.tsv
-    # Please visit http://cancer.sanger.ac.uk/cosmic/help/download
-    # Download /cosmic/grch37/cosmic/{version}/CosmicMutantExport.tsv.gz
-    $ gunzip CosmicMutantExport.tsv.gz
-   
+```
+$ cd GenomonHotspotDatabase/database
+# Download refGene.txt
+$ wget http://hgdownload.cse.ucsc.edu/goldenpath/hg19/database/refGene.txt.gz 
+$ gunzip refGene.txt.gz
+# Download ensemblToGeneName.txt
+$ wget http://hgdownload.cse.ucsc.edu/goldenpath/hg19/database/ensemblToGeneName.txt.gz
+$ gunzip ensemblToGeneName.txt.gz
+# Download CosmicMutantExport.tsv
+# Please visit http://cancer.sanger.ac.uk/cosmic/help/download
+# Download /cosmic/grch37/cosmic/{version}/CosmicMutantExport.tsv.gz
+$ gunzip CosmicMutantExport.tsv.gz
+```
+
 3. Download ANNOVAR database   
-    $ cd $annovar_dir
-    $ ./annotate_variation.pl -buildver hg19 -downdb -webfrom annovar refGene humandb/  
-    $ ./annotate_variation.pl -buildver hg19 -downdb -webfrom annovar ensGene humandb/  
-    $ ./annotate_variation.pl -buildver hg19 -downdb -webfrom annovar knownGene humandb/  
+```
+$ cd $annovar_dir
+$ ./annotate_variation.pl -buildver hg19 -downdb -webfrom annovar refGene humandb/  
+$ ./annotate_variation.pl -buildver hg19 -downdb -webfrom annovar ensGene humandb/  
+$ ./annotate_variation.pl -buildver hg19 -downdb -webfrom annovar knownGene humandb/  
+```
 
 4. Open scripts/make_hotspot_info.sh and set each entry.  
     REF_GENE_BED="The path to to the refGene.coding.exon.151207.bed"  
