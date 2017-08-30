@@ -25,6 +25,10 @@ database
 SetUp
 ----------
 
+1. download the software.
+git clone https://github.com/friend1ws/annot_utils.git
+
+
 1. Download the CancerHotspotFileCreator package to the resource directory.
 2. Download and install following external tools to any directory.  
     ** bedtools **  
