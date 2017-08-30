@@ -45,7 +45,7 @@ $ gunzip CosmicMutantExport.tsv.gz
 # Download refGene.txt
 $ wget http://hgdownload.cse.ucsc.edu/goldenpath/hg19/database/refGene.txt.gz 
 $ cd RefGeneTxtToBed
-$ python ref_seq2bed.py ../GenomonHotspotDatabase/database/refGene.txt.gz /home/kchiba/tools/bedtools
+$ python ref_seq2bed.py GenomonHotspotDatabase/database/refGene.txt.gz /home/kchiba/tools/bedtools
 ```
 
 3. Download ANNOVAR database   
