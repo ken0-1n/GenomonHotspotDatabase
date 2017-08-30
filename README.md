@@ -27,6 +27,7 @@ SetUp
 
 1. Download the software.
     $ git clone https://github.com/ken0-1n/GenomonHotspotDatabase.git
+    $ git clone https://github.com/ken0-1n/RefGeneTxtToBed.git
     
 2. Download database
 ```
