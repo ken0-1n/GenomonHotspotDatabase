@@ -25,16 +25,24 @@ database
 SetUp
 ----------
 
-1. download the software.
-git clone https://github.com/friend1ws/annot_utils.git
-
-
-1. Download the CancerHotspotFileCreator package to the resource directory.
-2. Download and install following external tools to any directory.  
-    ** bedtools **  
-    ** ANNOVAR **  
+1. Download the software.
+    $ git clone https://github.com/ken0-1n/GenomonHotspotDatabase.git
     
+2. Download database
+    $ cd GenomonHotspotDatabase/database
+    # Download refGene.txt
+    $ wget http://hgdownload.cse.ucsc.edu/goldenpath/hg19/database/refGene.txt.gz 
+    $ gunzip refGene.txt.gz
+    # Download ensemblToGeneName.txt
+    $ wget http://hgdownload.cse.ucsc.edu/goldenpath/hg19/database/ensemblToGeneName.txt.gz
+    $ gunzip ensemblToGeneName.txt.gz
+    # Download CosmicMutantExport.tsv
+    # Please visit http://cancer.sanger.ac.uk/cosmic/help/download
+    # Download /cosmic/grch37/cosmic/{version}/CosmicMutantExport.tsv.gz
+    $ gunzip CosmicMutantExport.tsv.gz
+   
 3. Download ANNOVAR database   
+    $ cd $annovar_dir
     $ ./annotate_variation.pl -buildver hg19 -downdb -webfrom annovar refGene humandb/  
     $ ./annotate_variation.pl -buildver hg19 -downdb -webfrom annovar ensGene humandb/  
     $ ./annotate_variation.pl -buildver hg19 -downdb -webfrom annovar knownGene humandb/  
