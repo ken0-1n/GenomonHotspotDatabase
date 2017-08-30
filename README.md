@@ -31,12 +31,15 @@ SetUp
 2. Download database
 ```
 $ cd GenomonHotspotDatabase/database
+
 # Download refGene.txt
 $ wget http://hgdownload.cse.ucsc.edu/goldenpath/hg19/database/refGene.txt.gz 
 $ gunzip refGene.txt.gz
+
 # Download ensemblToGeneName.txt
 $ wget http://hgdownload.cse.ucsc.edu/goldenpath/hg19/database/ensemblToGeneName.txt.gz
 $ gunzip ensemblToGeneName.txt.gz
+
 # Download CosmicMutantExport.tsv
 # Please visit http://cancer.sanger.ac.uk/cosmic/help/download
 # Download /cosmic/grch37/cosmic/{version}/CosmicMutantExport.tsv.gz
