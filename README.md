@@ -11,12 +11,6 @@ software
 * [bedtools](https://code.google.com/p/bedtools/)
 * [ANNOVAR](http://annovar.openbioinformatics.org/en/latest/user-guide/download/)
 
-database
-* The database/statistically_significant_hotspot.txt was created from the following table:    
-  [Identifying recurrent mutations in cancer reveals widespread lineage diversity and mutational specificity](http://www.nature.com/nbt/journal/v34/n2/full/nbt.3391.html) Chang, M.T. et al, Nature Biotechnology, 2016.
-  Supplementary Table 2: Summary of statistically significant hotspot mutations
-
-
 SetUp
 ----------
 
@@ -39,10 +33,15 @@ $ gunzip ensemblToGeneName.txt.gz
 # Download /cosmic/grch37/cosmic/{version}/CosmicMutantExport.tsv.gz
 $ gunzip CosmicMutantExport.tsv.gz
 
+# Download hotspots.txt
+# Please visit http://cancerhotspots.org/#/home and push the Download button.
+# The set of the hotspots.txt is placed under the database directory.
+
 # Download refGene.txt
 $ wget http://hgdownload.cse.ucsc.edu/goldenpath/hg19/database/refGene.txt.gz 
-$ cd RefGeneTxtToBed
-$ python ref_seq2bed.py GenomonHotspotDatabase/database/refGene.txt.gz /home/kchiba/tools/bedtools
+$ cd ../../RefGeneTxtToBed
+$ python ref_seq2bed.py ../GenomonHotspotDatabase/database/refGene.txt.gz /home/kchiba/tools/bedtools
+
 ```
 
 3. Download ANNOVAR database   
@@ -63,7 +62,7 @@ $ ./annotate_variation.pl -buildver hg19 -downdb -webfrom annovar knownGene huma
  13 ANNOVAR_DIR="The path to the annovar"  
  14 ENSEMBLE_GENE="The path to the ensemblToGeneName.txt"  
  15 COSMIC_MUTATNT="The path to the CosmicMutantExport.tsv"  
- 16 HOTSPOT_LIST="the path to the statistically_significant_hotspot.txt"  
+ 16 HOTSPOT_LIST="The path to the hotspots.txt"  
 ```
 
 Run
