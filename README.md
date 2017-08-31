@@ -52,7 +52,7 @@ $ ./annotate_variation.pl -buildver hg19 -downdb -webfrom annovar ensGene humand
 $ ./annotate_variation.pl -buildver hg19 -downdb -webfrom annovar knownGene humandb/  
 ```
 
-4. Open make_hotspot_info.sh and set each entry.  
+4. Edit make_hotspot_info.sh and set each entry.  
 ```
  $ vi GenomonHotspotDatabase/scripts/make_hotspot_info.sh
  
