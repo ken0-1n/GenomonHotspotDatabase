@@ -7,10 +7,10 @@
 
 LOGDIR=$1
 OUTPUTDIR=$2
-REF_GENE_BED="../database/refGene.coding.bed"
+REF_GENE_BED="../database/refGene.coding.exon.bed"
 ENSEMBLE_GENE="../database/ensemblToGeneName.txt"
 COSMIC_MUTATNT="../database/CosmicMutantExport.tsv"
-HOTSPOT_LIST="../database/statistically_significant_hotspot.txt"
+HOTSPOT_LIST="../database/hotspots.txt"
 BEDTOOLS="../tools/bedtools-2.24.0/bin/bedtools"
 GRCH37="../database/GRCh37/GRCh37.fa"
 ANNOVAR_DIR="../tools/annovar"

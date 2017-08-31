@@ -40,26 +40,18 @@ for line in hIN:
     F = line.split('\t')
     symbol = F[0]
     codon = F[1]
-    alt_codon = F[2]
-    amino_acids = F[3].split("|")
-    q_value = F[4]
-    tumor_count = F[5]
-    tumor_type_count = F[6]
-    valiation_level = F[7]
+    amino_acids = F[2].split("|")
+    q_value = F[3]
+    tumor_count = F[4]
+    tumor_type_count = F[5]
 
     for amino_acid_info in amino_acids:
         aa_list = amino_acid_info.split(":")
         tmp_aa = aa_list[0].replace("*","X")
         aa = "p." + codon + tmp_aa
-        hotspot_dict[symbol + "\t" + aa] = q_value +"\t"+ tumor_count + "\t"+ tumor_type_count + "\t" + valiation_level
+        hotspot_dict[symbol + "\t" + aa] = q_value +"\t"+ tumor_count + "\t"+ tumor_type_count
         flg = False
 
-    if alt_codon != "NA":
-        for amino_acid_info in amino_acids:
-            aa_list = amino_acid_info.split(":")
-            tmp_aa = aa_list[0].replace("*","X")
-            aa = "p." + alt_codon + tmp_aa
-            hotspot_dict[symbol + "\t" + aa] = q_value +"\t"+ tumor_count + "\t"+ tumor_type_count + "\t" + valiation_level
 hIN.close()
 
 hOUT = open(output_dir + "/refGene_hotspot.txt", 'w')
